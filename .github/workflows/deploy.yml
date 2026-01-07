@@ -30,7 +30,7 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        region: us-east-1
+        region: region: ap-south-1
         application_name: hello-eb-demo
         environment_name: Hello-eb-demo-env
         version_label: ${{ github.sha }}
