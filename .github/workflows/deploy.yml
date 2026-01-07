@@ -18,7 +18,7 @@ jobs:
       with:
         distribution: temurin
         java-version: 17
-        
+
     - name: Make Maven Wrapper Executable
       run: chmod +x ./mvnw
 
@@ -30,8 +30,8 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        region: region: ap-south-1
-        application_name: hello-eb-demo
-        environment_name: Hello-eb-demo-env
+        region: ap-south-1                   # Correct syntax
+        application_name: hello-eb-demo      # Exact EB app name
+        environment_name: Hello-eb-demo-env  # Exact EB environment name
         version_label: ${{ github.sha }}
-        deployment_package: target/demo-0.0.1-SNAPSHOT.jar  # Correct input
+        deployment_package: target/demo-0.0.1-SNAPSHOT.jar
